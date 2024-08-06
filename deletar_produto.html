@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete um produto - Sabor Caseiro</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/principal.css" />
+    <link rel="stylesheet" href="css/formularios.css" />
+    <script type="module" src="js/principal.js"></script>
+    <script type="module" src="js/deletar_produto.js"></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="caixa_logotipo">
+        <img src="img/logotipo.svg" alt="Logotipo do Sabor Caseiro" />
+        <h1>Sabor Caseiro</h1>
+      </div>
+      <div class="caixa_barra_navegacao_cabecalho">
+        <button
+          type="button"
+          id="botao_abrir_barra_lateral"
+          class="botao_abrir_barra_lateral"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <nav class="barra_navegacao_cabecalho">
+          <a href="index.html" class="link_barra_navegacao_cabecalho">
+            <i class="bi bi-plus-square"></i> Cadastrar produto
+          </a>
+          <a
+            href="consultar_produtos.html"
+            class="link_barra_navegacao_cabecalho"
+          >
+            <i class="bi bi-search"></i> Consultar produtos
+          </a>
+          <a href="editar_produto.html" class="link_barra_navegacao_cabecalho">
+            <i class="bi bi-pencil-square"></i> Editar produto
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="conteudo_principal">
+      <header class="cabecalho_conteudo_principal">
+        <h2 class="titulo_conteudo_principal">
+          Delete um produto <i class="bi bi-trash"></i>
+        </h2>
+      </header>
+      <form
+        action="config/processar.php"
+        method="POST"
+        novalidate
+        id="formulario_deletar_produto"
+        class="formulario_deletar_produto"
+      >
+        <div class="caixa_campo">
+          <label for="id" class="rotulo">ID (#): <span>*</span></label>
+          <input
+            type="number"
+            name="id"
+            id="id"
+            placeholder="ID (#) do produto"
+            min="1"
+            required
+          />
+        </div>
+        <button type="submit" class="botao_envio_formulario">
+          Deletar <i class="bi bi-trash"></i>
+        </button>
+      </form>
+    </main>
+
+    <aside id="barra_lateral" class="barra_lateral">
+      <button
+        type="button"
+        id="botao_fechar_barra_lateral"
+        class="botao_fechar_barra_lateral"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <nav class="barra_navegacao_barra_lateral">
+        <a href="index.html" class="link_barra_navegacao_barra_lateral">
+          <i class="bi bi-plus-square"></i> Cadastrar produto
+        </a>
+        <a
+          href="consultar_produtos.html"
+          class="link_barra_navegacao_barra_lateral"
+        >
+          <i class="bi bi-search"></i> Consultar produtos
+        </a>
+        <a
+          href="editar_produto.html"
+          class="link_barra_navegacao_barra_lateral"
+        >
+          <i class="bi bi-pencil-square"></i> Editar produto
+        </a>
+      </nav>
+    </aside>
+
+    <div id="caixa_secao_modal" class="caixa_secao_modal">
+      <section id="secao_modal" class="secao_modal">
+        <header class="cabecalho_secao_modal">
+          <h3 class="titulo_secao_modal">
+            O sistema diz... <i class="bi bi-exclamation-triangle"></i>
+          </h3>
+          <button
+            type="button"
+            id="botao_fechar_secao_modal"
+            class="botao_fechar_secao_modal"
+          >
+            Fechar <i class="bi bi-x-square"></i>
+          </button>
+        </header>
+        <div id="corpo_secao_modal" class="corpo_secao_modal">
+          <p></p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="rodape">
+      <p>Copyright &copy; 2024 Sabor Caseiro.</p>
+    </footer>
+  </body>
+</html>

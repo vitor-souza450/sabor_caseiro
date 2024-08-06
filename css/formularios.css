@@ -1,0 +1,37 @@
+.rotulo span {
+  color: #ff0000;
+}
+
+.tipo {
+  display: block;
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 0.9rem 0.7rem;
+  border: 0.063rem solid #ccc;
+  border-radius: 0.3rem;
+}
+
+.tipo:focus {
+  outline: none;
+}
+
+.botao_envio_formulario {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: var(--cor_sabor_caseiro_2);
+  padding: 0.9rem 1.1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  opacity: 0.9;
+}
+
+.botao_envio_formulario:hover {
+  opacity: 1;
+}
+
+.botao_envio_formulario:focus {
+  outline: none;
+}

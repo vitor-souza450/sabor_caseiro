@@ -1,0 +1,45 @@
+.caixa_campo label {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.caixa_tabela_produtos {
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.inativo {
+  display: none;
+}
+
+.tabela_produtos {
+  white-space: nowrap;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.linha_tabela_produtos th {
+  color: #fff;
+  background-color: var(--cor_sabor_caseiro_2);
+  padding: 0.7rem;
+}
+
+.linha_tabela_produtos td {
+  text-align: center;
+  padding: 0.7rem;
+}
+
+.linha_tabela_produtos:nth-child(even) td {
+  background-color: #ccc;
+}
+
+.sem_pesquisa {
+  display: none;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #aaa;
+}
+
+.sem_pesquisa.ativo {
+  display: block;
+}

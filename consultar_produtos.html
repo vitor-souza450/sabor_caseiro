@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulte os produtos - Sabor Caseiro</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/principal.css" />
+    <link rel="stylesheet" href="css/consultar_produtos.css" />
+    <script type="module" src="js/principal.js"></script>
+    <script src="js/consultar_produtos.js" defer></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="caixa_logotipo">
+        <img src="img/logotipo.svg" alt="Logotipo do Sabor Caseiro" />
+        <h1>Sabor Caseiro</h1>
+      </div>
+      <div class="caixa_barra_navegacao_cabecalho">
+        <button
+          type="button"
+          id="botao_abrir_barra_lateral"
+          class="botao_abrir_barra_lateral"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <nav class="barra_navegacao_cabecalho">
+          <a href="index.html" class="link_barra_navegacao_cabecalho">
+            <i class="bi bi-plus-square"></i> Cadastrar produto
+          </a>
+          <a href="editar_produto.html" class="link_barra_navegacao_cabecalho">
+            <i class="bi bi-pencil-square"></i> Editar produto
+          </a>
+          <a href="deletar_produto.html" class="link_barra_navegacao_cabecalho">
+            <i class="bi bi-trash"></i> Deletar produto
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="conteudo_principal">
+      <header class="cabecalho_conteudo_principal">
+        <h2 class="titulo_conteudo_principal">
+          Consulte os produtos <i class="bi bi-search"></i>
+        </h2>
+      </header>
+      <div class="caixa_campo">
+        <label for="pesquisa">Pesquise pelo ID, nome, tipo ou preço:</label>
+        <input
+          type="search"
+          id="pesquisa"
+          placeholder="ID (#), nome, tipo ou preço do produto"
+          maxlength="30"
+        />
+      </div>
+      <div id="caixa_tabela_produtos" class="caixa_tabela_produtos">
+        <table class="tabela_produtos">
+          <thead class="cabecalho_tabela_produtos">
+            <tr class="linha_tabela_produtos">
+              <th>#</th>
+              <th>Nome</th>
+              <th>Tipo</th>
+              <th>Preço</th>
+            </tr>
+          </thead>
+          <tbody id="corpo_tabela_produtos" class="corpo_tabela_produtos">
+            <tr class="linha_tabela_produtos">
+              <td>1</td>
+              <td>Coxinha de frango</td>
+              <td>Aperitivo</td>
+              <td>R$ 5,00</td>
+            </tr>
+            <tr class="linha_tabela_produtos">
+              <td>2</td>
+              <td>Macarrão com almôndegas</td>
+              <td>Prato principal</td>
+              <td>R$ 17,00</td>
+            </tr>
+            <tr class="linha_tabela_produtos">
+              <td>3</td>
+              <td>Sorvete de chocolate</td>
+              <td>Sobremesa</td>
+              <td>R$ 6,50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="sem_pesquisa" class="sem_pesquisa">
+        Não foi possível encontrar sua pesquisa.
+        <i class="bi bi-emoji-frown"></i>
+      </p>
+    </main>
+
+    <aside id="barra_lateral" class="barra_lateral">
+      <button
+        type="button"
+        id="botao_fechar_barra_lateral"
+        class="botao_fechar_barra_lateral"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <nav class="barra_navegacao_barra_lateral">
+        <a href="index.html" class="link_barra_navegacao_barra_lateral">
+          <i class="bi bi-plus-square"></i> Cadastrar produto
+        </a>
+        <a
+          href="editar_produto.html"
+          class="link_barra_navegacao_barra_lateral"
+        >
+          <i class="bi bi-pencil-square"></i> Editar produto
+        </a>
+        <a
+          href="deletar_produto.html"
+          class="link_barra_navegacao_barra_lateral"
+        >
+          <i class="bi bi-trash"></i> Deletar produto
+        </a>
+      </nav>
+    </aside>
+
+    <div id="caixa_secao_modal" class="caixa_secao_modal">
+      <section id="secao_modal" class="secao_modal">
+        <header class="cabecalho_secao_modal">
+          <h3 class="titulo_secao_modal">
+            O sistema diz... <i class="bi bi-exclamation-triangle"></i>
+          </h3>
+          <button
+            type="button"
+            id="botao_fechar_secao_modal"
+            class="botao_fechar_secao_modal"
+          >
+            Fechar <i class="bi bi-x-square"></i>
+          </button>
+        </header>
+        <div id="corpo_secao_modal" class="corpo_secao_modal">
+          <p></p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="rodape">
+      <p>Copyright &copy; 2024 Sabor Caseiro.</p>
+    </footer>
+  </body>
+</html>
